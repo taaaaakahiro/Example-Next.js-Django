@@ -1,8 +1,18 @@
-FROM python:3.7-alpine
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
+FROM python:3.9
+
 WORKDIR /code
-ADD requirements.txt /code/
-RUN pip3 install -r requirements.txt
+
+# set working directory
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install system dependencies
+RUN apt-get update \
+    && apt-get clean
+
+# install dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
 ADD . /code/
 EXPOSE 8001
