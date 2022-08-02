@@ -22,7 +22,7 @@ jobs:
         # 実行するPythonバージョン
         python-version: [3.9]
     env:
-      SECRET_KEY: ${env.SECRET_KEY}
+      SECRET_KEY: ${{env.SECRET_KEY}}
 
     # 実行する処理
     steps:
