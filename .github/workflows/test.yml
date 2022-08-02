@@ -21,8 +21,8 @@ jobs:
       matrix:
         # 実行するPythonバージョン
         python-version: [3.9]
-    environment:
-      SECRET_KEY = ${env.SECRET_KEY}
+    env:
+      SECRET_KEY: ${env.SECRET_KEY}
 
     # 実行する処理
     steps:
