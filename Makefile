@@ -17,5 +17,8 @@ migrate:
 
 root:
 	${DOCKER} exec web python3 ./backend/manage.py createsuperuser
+
+sh:
+	${DOCKER} exec web sh
 	
 
