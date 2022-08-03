@@ -4,7 +4,7 @@ name: Django CI
 # イベント（ワークフローのトリガー）
 on:
   push:
-    branches: [ main ]
+    # branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -40,3 +40,5 @@ jobs:
     - name: Run Tests
       run: |
         python ./backend/manage.py test
+      env:
+        SECRET_KEY: ${{ env.SECRET_KEY }}
