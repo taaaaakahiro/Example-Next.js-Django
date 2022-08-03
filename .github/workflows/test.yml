@@ -42,3 +42,8 @@ jobs:
         python ./backend/manage.py test
       env:
         SECRET_KEY: ${{ env.SECRET_KEY }}
+        DEBUG: true
+        PORT: 3306
+        MYSQL_DATABASE: example
+        MYSQL_ROOT_USER: root
+        MYSQL_PASSWORD: password
