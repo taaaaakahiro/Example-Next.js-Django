@@ -15,6 +15,9 @@ test:
 migrate:
 	${DOCKER} exec web python3 ./backend/manage.py migrate
 
+migrations:
+	${DOCKER} exec web python3 ./backend/manage.py makemigrations
+
 root:
 	${DOCKER} exec web python3 ./backend/manage.py createsuperuser
 
