@@ -11,3 +11,11 @@ down:
 
 test:
 	${DOCKER} exec web python3 ./backend/manage.py test
+
+migrate:
+	${DOCKER} exec web python3 ./backend/manage.py migrate
+
+root:
+	${DOCKER} exec web python3 ./backend/manage.py createsuperuser
+	
+

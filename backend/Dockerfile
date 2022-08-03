@@ -15,4 +15,6 @@ RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 ADD . /code/
+
+CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8001" ]
 EXPOSE 8001
