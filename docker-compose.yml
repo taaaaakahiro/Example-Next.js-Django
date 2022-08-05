@@ -27,11 +27,11 @@ services:
 
   app:
     build:
-      context: ./frontend
+      context: .
     container_name: next
     tty: true
     volumes:
-      - ./frontend:/app
+      - .:/app
     command: sh -c "npm run dev"
     ports:
       - "3000:3000"
