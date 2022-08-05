@@ -25,17 +25,17 @@ services:
     depends_on:
       - db
 
-  app:
-    build:
-      context: .
-    container_name: next
-    tty: true
-    volumes:
-      - ./frontend:/app
-    command: sh -c "npm run dev"
-    ports:
-      - "3000:3000"
-    environment:
-     - WATCHPACK_POLLING=true
-    depends_on:
-      - web
+  # app:
+  #   build:
+  #     context: .
+  #   container_name: next
+  #   tty: true
+  #   volumes:
+  #     - ./frontend:/app
+  #   command: sh -c "npm run dev"
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #    - WATCHPACK_POLLING=true
+  #   depends_on:
+  #     - web
