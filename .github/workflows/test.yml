@@ -1,14 +1,11 @@
-# ワークフロー名
 name: Django CI
 
-# イベント（ワークフローのトリガー）
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-# ジョブ
 jobs:
   build:
     runs-on: ubuntu-latest
