@@ -1,24 +1,19 @@
-# ワークフロー名
 name: Django CI
 
-# イベント（ワークフローのトリガー）
 on:
   push:
     # branches: [ main ]
   pull_request:
     branches: [ main ]
 
-# ジョブ
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      # 同時に実行できるジョブの最大数
       max-parallel: 4
       matrix:
         python-version: [3.9]
 
-    # 実行する処理
     steps:
     - uses: actions/checkout@v2
 
