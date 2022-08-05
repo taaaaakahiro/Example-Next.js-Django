@@ -31,7 +31,7 @@ jobs:
       run: |
         python ./backend/manage.py test
       env:
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        SECRET_KEY: ${{ secret.SECRET_KEY }}
         DEBUG: true
         PORT: 3306
         MYSQL_DATABASE: example
