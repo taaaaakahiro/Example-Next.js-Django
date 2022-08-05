@@ -19,4 +19,8 @@
     - N+1  
         - https://zenn.dev/ikemo/articles/django-queryset-n-plusone  
         - https://selfs-ryo.com/detail/django_nplusone#djangon1  
+    - gunicorn  
+        -   
+    - Nginx
+        - 
 
