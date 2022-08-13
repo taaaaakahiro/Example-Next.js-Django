@@ -1,0 +1,22 @@
+[
+    {
+        "model": "api_rest_framework.Customer",
+        "pk": 1,
+        "fields": {
+        "pw": "test",
+        "fullname": "小出隆太",
+        "fullname_kana": "コイデタカヒロ",
+        "mail": "tesfdagft@gmail.com",
+        "tel": "113456789",
+        "age": 150,
+        "line_name": "koide",
+        "occupation_id": 1,
+        "payment_id": 1,
+        "prefecture_id": 1,
+        "status_id": 1,
+        "fx": 1,
+        "payment_status_id": 3,
+        "stock": 1
+        }
+    }
+]

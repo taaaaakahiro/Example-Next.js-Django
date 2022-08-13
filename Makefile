@@ -26,6 +26,10 @@ root:
 rollback:
 	${DOCKER} exec web python3 ./backend/manage.py migrate api_rest_framework zero
 
+loaddata:
+	${DOCKER} exec web python3 ./backend/manage.py loaddata init.json
+	${DOCKER} exec web python3 ./backend/manage.py loaddata user.json
+
 sh:
 	${DOCKER} exec web sh
 	
