@@ -1,18 +1,13 @@
-# Example-Next.js-Django
+# Example-Next-Django
 
-## branch
- ```Ex
-    backend/○○○
-    frontend/○○○
- ```
+## branch rule
+ - like below
+   ```
+   backend/feature/xxx
+   frontend/feature/xxx
+   ```
 
 ## Setup/Environment
 
-## front/Next.js
-
-## back/Django
- - version  
- 
- - command  
 
 

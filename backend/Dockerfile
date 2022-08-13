@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.8-alpine
 
 WORKDIR /code
 
@@ -7,14 +7,12 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install system dependencies
-RUN apt-get update \
-    && apt-get clean
+RUN apk update \
+    && apk --no-cache add gcc mysql-dev python3-dev musl-dev
 
-# install dependencies
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip setuptools
+
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
-ADD . /code/
 
-CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8001" ]
 EXPOSE 8001

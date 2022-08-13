@@ -16,8 +16,7 @@ services:
     build: ./backend
     container_name: django
     command: >
-      sh -c "python3 ./backend/manage.py migrate &&
-        python3 ./backend/manage.py runserver 0.0.0.0:8001"
+      sh -c "python3 ./backend/manage.py runserver 0.0.0.0:8001"
     volumes:
       - .:/code
     ports:
